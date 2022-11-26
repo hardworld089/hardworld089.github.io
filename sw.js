@@ -4,7 +4,7 @@ const CACHE_NAME = 'v1_cache_102';
 //archivos a guardar
 var urlsToChache=[
     './',
-    './index.html',
+    'https://hardworld089.github.io/index.html',
     './sw.js',
     './manifest.json',
     './css/slider.css',
