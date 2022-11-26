@@ -1,10 +1,10 @@
 {
     "name": "BaconKingdom",
     "short_name": "Beacon_Kingdom",
-    "start_url": "https://hardworld089.github.io/index.html",
+    "start_url": "/index.html",
     "description": "PWA Beacon_Kingdom",
     "lang": "en-US",
-    "scope": "https://hardworld089.github.io/index.html",
+    "scope": "/index.html",
     "display": "standalone",
     "icons": [{
     "src": "img/512-512.png",

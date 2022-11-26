@@ -6,7 +6,7 @@ var urlsToChache=[
     './',
     './index.html',
     './sw.js',
-    'Manifest.json',
+    './manifest.json',
     './css/slider.css',
     './css/styles.css',
     './js/nav-menu.js',
