@@ -5,7 +5,7 @@ const CACHE_NAME = 'v1_cache_102';
 var urlsToChache=[
     './',
     './index.html',
-    './manifest.json',
+    './Manifest.json',
     './css/slider.css',
     './css/styles.css',
     './sw.js',
