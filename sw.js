@@ -8,10 +8,10 @@ var urlsToChache=[
     'https://hardworld089.github.io/sw.js',
     'https://hardworld089.github.io/jquery.js',
     'https://hardworld089.github.io/manifest.json',
-    /* 'https://hardworld089.github.io/css/slider.css',
+    'https://hardworld089.github.io/css/slider.css',
     'https://hardworld089.github.io/css/styles.css',
     'https://hardworld089.github.io/js/nav-menu.js',
-    'https://hardworld089.github.io/img/', */
+    'https://hardworld089.github.io/img/',
 ];
 
 //install
