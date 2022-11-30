@@ -103,13 +103,15 @@ footer{
     margin-top: 70px;
 }
 .content-Img{
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.288);
     padding: 30px;
     width: 100%;
     
 }
 .content img{
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
 }
 
 .title{
