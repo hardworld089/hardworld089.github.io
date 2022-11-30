@@ -14,9 +14,12 @@ window.addEventListener('DOMContentLoaded', async()=>{
     const comet = element.data()
     html += `
         <div>
-            <h3>${comet.nombre}</h3>
-            <h5>${comet.email}</h5>
-            <p>${comet.coment}</p>
+            <div class="it-coment">
+                <h3>${comet.nombre}</h3>
+                <i>--Correo: ${comet.email}<i>
+                <p>${comet.coment}</p>
+            </div>
+            
         </div>
     `;
     });
