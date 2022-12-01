@@ -1,4 +1,4 @@
-console.log('bro lo lograste  eres la verga');
+console.log('conexion exitosa');
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
