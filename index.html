@@ -24,7 +24,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/72e7afebce.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/Icono_Pig.ico" />
-    
+    <style>
+        #map{
+            width:100%;
+            height:400px;
+            background-color:gray;
+        }
+    </style>
     <title>Bacon kingdom</title>
 </head>
 <body>
@@ -70,6 +76,62 @@
                 </p>
             </div>
         </div>
+        <div class="ldiv"></div>
+             <div class="conteiner-fluid titu-bs">
+                    <center><h2 class="tn2 ">Ubicanos</h2>
+                    <p>Visita nuestro centro de desarrollo para que conozcas todo el equipo de desarrollo</p></center>
+                </div>
+                <body>
+        <div id="map"></div>
+            <script>
+                function initMap() {
+                    //variable que permite inicializar el mapa de preferencia lo mas centrico posible alos lugares que se marcaran en el mismo
+                    var map = new google.maps.Map(document.getElementById('map'), { zoom:14 , center: { lat: 21.452342, lng: -104.898838 } });
+                    infoWindow = new google.maps.InfoWindow;
+                    //Crear una variable de tipo para determinar los caracteres albetitos que tendra cada marcador
+                    var labels = "ABCDFGHIJKLMNOPQRSTUVWYZ";
+                    //Añadir al mapa los marcaores en base al arreglo de ubicaciones
+                    var markers = locations.map(function (location, i) {
+                        return new google.maps.Marker({
+                            position: location,
+                            label: labels[i % labels.length]
+                        });
+                    });
+                    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'imagenes/m' });
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            var pos = { lat: position.coords.latitude, lng: position.coords.longitude };
+                            infoWindow.setPosition(pos);
+                            infoWindow.setContent('Aqui estás');
+                            infoWindow.open(map);
+                            map.setCenter(pos);
+                        }, function () {
+                            handleLocationError(true, infoWindow, map.getCenter());
+                        });//Fin  function(position)
+    
+                    }
+                    else {
+                        handleLocationError(false, infoWindow, map.getCenter());
+                    }// fin else
+                }//fin del init map
+                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                    infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ? 'Error:Falló el servicio de geolocalización' :
+                        'Error: Tu navegador no soporta geolocalización');
+                    infoWindow.open(map);
+                }
+                var locations = [
+                    { lat: 21.444846, lng: -104.898633 },
+                    { lat: 21.451373, lng: -104.899430 },
+                    { lat: 21.450717, lng: -104.894080 },
+                    { lat: 21.454821, lng: -104.904839 }
+                ]
+            </script>
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyC99WJ4j8SX9l8uYOHfBjGnoW9hYlZUixw&callback=initMap">
+            </script>
         <div class="divideCuadrantes"></div>
         <!-- Cuadrante two -->
         <div class="cuadrant">
